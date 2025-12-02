@@ -74,6 +74,12 @@ local color = {
   _72 = "#4682b4",
   _75 = "#392a52",
   _82 = "#151838",
+  light_blue_dim = "#252e32",
+  golden_yellow_dim = "#413113",
+  green_dim = "#28321b",
+  olive_green_dim = "#273221",
+  light_lavender_dim = "#292232",
+  lavender_dim = "#2d2332",
 }
 
 ---@param args Config?
@@ -799,6 +805,24 @@ M.configure_highlights = function()
   hi(0, "NeoTreeTabInactive", { fg = color.dark_grey, bg = color.very_dark_gray })
   hi(0, "NeoTreeTabSeparatorActive", { fg = color.light_slate_gray, bg = color.very_dark_gray })
   hi(0, "NeoTreeTabSeparatorInactive", { fg = color.light_slate_gray, bg = color.dark_grey })
+
+  -- Colors for render-markdown.nvim plugin
+  hi(0, "RenderMarkdownH1Bg", { fg = color.light_blue, bg = color.light_blue_dim, bold = true })
+  hi(0, "RenderMarkdownH2Bg", { fg = color.golden_yellow, bg = color.golden_yellow_dim, bold = true })
+  hi(0, "RenderMarkdownH3Bg", { fg = color.green, bg = color.green_dim, bold = true })
+  hi(0, "RenderMarkdownH4Bg", { fg = color.olive_green, bg = color.olive_green_dim, bold = true })
+  hi(0, "RenderMarkdownH5Bg", { fg = color.light_lavender, bg = color.light_lavender_dim, bold = true })
+  hi(0, "RenderMarkdownH6Bg", { fg = color.lavender, bg = color.lavender_dim, bold = true })
+  hi(0, "RenderMarkdownH1", { fg = color.light_blue })
+  hi(0, "RenderMarkdownH2", { fg = color.golden_yellow })
+  hi(0, "RenderMarkdownH3", { fg = color.green })
+  hi(0, "RenderMarkdownH4", { fg = color.olive_green })
+  hi(0, "RenderMarkdownH5", { fg = color.light_lavender })
+  hi(0, "RenderMarkdownH6", { fg = color.lavender })
+  hi(0, "@markup.quote", { fg = color.comment })
+  hi(0, "@markup.heading", { fg = color.pale_gold })
+  hi(0, "@markup.list.unchecked", { fg = color.comment })
+  hi(0, "@markup.list.checked", { fg = color.gray })
 end
 
 return M
